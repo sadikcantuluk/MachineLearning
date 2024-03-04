@@ -23,6 +23,8 @@ imputer = imputer.fit(boy_kilo_yas)
 
 boy_kilo_yas = imputer.transform(boy_kilo_yas)
 
+#VEYA TEK SATIRDA boy_kilo_yas = imputer.fit_transform(boy_kilo_yas)
+
 print(boy_kilo_yas)
 
 '''
