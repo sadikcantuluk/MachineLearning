@@ -38,7 +38,7 @@ ohe = preprocessing.OneHotEncoder()
 
 ulke = ohe.fit_transform(ulke).toarray()
 
-
+print(ulke)
 #DataFreamlerin oluşturulması ve birleştirilmesi.
 
 
@@ -58,7 +58,7 @@ sonuc4 = pd.concat([sonuc1,sonuc2],axis=1)
 #print(sonuc4)
 
 resultList = pd.concat([sonuc4,sonuc3],axis=1)
-print(resultList)
+#print(resultList)
 
 #### Verilerin Eğitim ve Test Verisi Olarak Ayırma
 
