@@ -24,13 +24,13 @@ x_train,x_test,y_train,y_test = train_test_split(boy_kilo_yas,cinsiyet,test_size
 
 # Decision Tree
 
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.tree import DecisionTreeClassifier
 
-rfc = RandomForestClassifier(n_estimators = 10, criterion = "entropy")
+dtc = DecisionTreeClassifier(criterion = "entropy")
 
-rfc.fit(x_train, y_train)
+dtc.fit(x_train, y_train)
 
-y_pred = rfc.predict(x_test)
+y_pred = dtc.predict(x_test)
 
 # Confusion Matrix
 from sklearn.metrics import confusion_matrix
