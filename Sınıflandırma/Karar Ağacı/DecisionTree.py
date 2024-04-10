@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Apr 10 15:31:21 2024
+Created on Wed Apr 10 22:24:55 2024
 
 @author: sadik
 """
@@ -22,22 +22,37 @@ from sklearn.model_selection import train_test_split
 
 x_train,x_test,y_train,y_test = train_test_split(boy_kilo_yas,cinsiyet,test_size=0.33,random_state=0)
 
-# SVM 
+# Decision Tree
 
-from sklearn.svm import SVC
+from sklearn.tree import DecisionTreeClassifier
 
-svc = SVC(kernel = "linear") #Default 'rbf' dir.
+dtc = DecisionTreeClassifier(criterion = "entropy")
 
-svc.fit(x_train, y_train)
+dtc.fit(x_train, y_train)
 
-y_pred = svc.predict(x_test)
+y_pred = dtc.predict(x_test)
 
 # Confusion Matrix
-
 from sklearn.metrics import confusion_matrix
 
-cm = confusion_matrix(y_test,y_pred)
+cm = confusion_matrix(y_test, y_pred)
 
 print(cm)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
